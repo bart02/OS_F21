@@ -1,0 +1,16 @@
+  438  nano main.c
+  439  gcc main.c 
+  441  ./a.out
+  442  vim
+  443  cd ..
+  444  cd Inno
+  445  cd Innopolis
+  447  git clone https://github.com/bart02/OS_F21.git
+  449  cd OS_F21
+  451  mkdir week1
+  453  cd week1
+  455  ls /usr/bin | grep gcc
+  456  ls /usr/bin | grep gcc | sort -r
+  457  ls /usr/bin | grep gcc | sort -r > ex1.txt
+  458  sl
+  459  ls
