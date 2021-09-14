@@ -1,0 +1,24 @@
+Hello from parent [15049 - 44]
+Hello from child [0 - 44]
+Hello from parent [15052 - 51]
+Hello from child [0 - 51]
+Hello from parent [15056 - 58]
+Hello from child [0 - 58]
+Hello from parent [15059 - 65]
+Hello from child [0 - 65]
+Hello from parent [15062 - 72]
+Hello from child [0 - 72]
+Hello from parent [15065 - 79]
+Hello from child [0 - 79]
+Hello from parent [15068 - 86]
+Hello from child [0 - 86]
+Hello from parent [15071 - 93]
+Hello from child [0 - 93]
+Hello from parent [15074 - 0]
+Hello from child [0 - 0]
+Hello from parent [15077 - 7]
+Hello from child [0 - 7]
+
+------
+
+Parent has child's pid, child always has 0.

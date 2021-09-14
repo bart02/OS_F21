@@ -1,0 +1,65 @@
+--- 3 times ---
+
+artem@Artems-MBP week4 % pstree | grep a.out
+ |   \-+= 16404 artem ./a.out
+ |     |-+- 16405 artem ./a.out
+ |     | |-+- 16417 artem ./a.out
+ |     | | \--- 16441 artem ./a.out
+ |     | \--- 16440 artem ./a.out
+ |     |-+- 16418 artem ./a.out
+ |     | \--- 16442 artem ./a.out
+ |     \--- 16443 artem ./a.out
+ |     \--- 16463 artem grep a.out
+
+-----------
+
+8 processes, because each forked process calls other forks
+
+             P0
+         /   |   \
+       P1    P4   P2
+      /  \          \
+    P3    P6         P5
+   /
+ P7
+Source: https://www.geeksforgeeks.org/fork-system-call/
+
+
+
+
+--- 5 times ---
+artem@Artems-MBP week4 % pstree | grep a.out
+ |   \-+= 16570 artem ./a.out
+ |     |-+- 16571 artem ./a.out
+ |     | |-+- 16583 artem ./a.out
+ |     | | |-+- 16616 artem ./a.out
+ |     | | | |-+- 16658 artem ./a.out
+ |     | | | | \--- 16690 artem ./a.out
+ |     | | | \--- 16692 artem ./a.out
+ |     | | |-+- 16656 artem ./a.out
+ |     | | | \--- 16693 artem ./a.out
+ |     | | \--- 16694 artem ./a.out
+ |     | |-+- 16615 artem ./a.out
+ |     | | |-+- 16657 artem ./a.out
+ |     | | | \--- 16691 artem ./a.out
+ |     | | \--- 16696 artem ./a.out
+ |     | |-+- 16655 artem ./a.out
+ |     | | \--- 16697 artem ./a.out
+ |     | \--- 16695 artem ./a.out
+ |     |-+- 16584 artem ./a.out
+ |     | |-+- 16617 artem ./a.out
+ |     | | |-+- 16659 artem ./a.out
+ |     | | | \--- 16701 artem ./a.out
+ |     | | \--- 16699 artem ./a.out
+ |     | |-+- 16661 artem ./a.out
+ |     | | \--- 16703 artem ./a.out
+ |     | \--- 16698 artem ./a.out
+ |     |-+- 16618 artem ./a.out
+ |     | |-+- 16660 artem ./a.out
+ |     | | \--- 16702 artem ./a.out
+ |     | \--- 16700 artem ./a.out
+ |     |-+- 16662 artem ./a.out
+ |     | \--- 16704 artem ./a.out
+ |     \--- 16705 artem ./a.out
+
+2^5 = 32 processes
