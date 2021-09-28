@@ -1,3 +1,10 @@
+/*
+ * Shortest job first algorithm.
+ * 
+ * The greedy algorithm, has better performance than FCFS,
+ * but has the standard disadvantages of a greedy algorithm.
+ */
+
 #include <stdio.h>
 #include <limits.h>
 
@@ -44,6 +51,7 @@ int main(){
     float tat_sum = 0;
     float wt_sum = 0;
 
+    printf("\nP#\tAT\tBT\tCT\tTAT\tWT");
     for (int proc_i = 0; proc_i < n; proc_i++) {
         int proc = -1;
         for (int i = 0; i < n; i++) {
@@ -74,10 +82,7 @@ int main(){
 
         P[proc].served = 1;
 
-        printf("\nProcess num. %d\n", P[proc].i);
-        printf("Arrival time: %d\n", P[proc].arrival_time);
-        printf("Waiting time: %d\n", P[proc].waiting_time);
-        printf("Turn around time: %d\n", P[proc].completion_time - P[proc].arrival_time);
+        printf("\n%d\t%d\t%d\t%d\t%d\t%d", P[proc].i, P[proc].arrival_time, P[proc].burst_time, P[proc].completion_time, P[proc].completion_time - P[proc].arrival_time, P[proc].waiting_time);
 
         tat_sum += P[proc].completion_time - P[proc].arrival_time;
         wt_sum += P[proc].waiting_time;

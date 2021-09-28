@@ -1,3 +1,9 @@
+/*
+ * First come, first served (FCFS) algorithm.
+ *
+ * The simplest algorithm, has the worst performance on big numbers of processes.
+ */
+
 #include <stdio.h>
 #include <limits.h>
 
@@ -32,6 +38,7 @@ int main(){
     float tat_sum = 0;
     float wt_sum = 0;
 
+    printf("\nP#\tAT\tBT\tCT\tTAT\tWT");
     for (int proc_i = 0; proc_i < n; proc_i++) {
         int arrival_time_min = INT_MAX;
         int proc = -1;
@@ -54,10 +61,7 @@ int main(){
 
         P[proc].served = 1;
 
-        printf("\nProcess num. %d\n", proc);
-        printf("Arrival time: %d\n", P[proc].arrival_time);
-        printf("Waiting time: %d\n", P[proc].waiting_time);
-        printf("Turn around time: %d\n", P[proc].completion_time - P[proc].arrival_time);
+        printf("\n%d\t%d\t%d\t%d\t%d\t%d", proc, P[proc].arrival_time, P[proc].burst_time, P[proc].completion_time, P[proc].completion_time - P[proc].arrival_time, P[proc].waiting_time);
 
         tat_sum += P[proc].completion_time - P[proc].arrival_time;
         wt_sum += P[proc].waiting_time;
