@@ -1,0 +1,4 @@
+13 bits specify the byte offset (0 to 8191) within the selected page.
+3 bits specify the page.
+
+So we can have 2^3 = 8 pages.
