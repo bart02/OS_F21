@@ -1,0 +1,2 @@
+../../OS_F21/week1/file.txt
+../../OS_F21/week10/_ex2.txt

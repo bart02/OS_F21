@@ -1,0 +1,6 @@
+
+
+This number means the octal representation for each entity (u, o, g)
+660 means 'rw-rw----' read-write permission for user and group, no perm for others
+775 means 'rwxrwxr-x' all permission for user and group, read-execute for others
+775 means 'rwxrwxrwx' all permission for everyone
