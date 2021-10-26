@@ -1,0 +1,4 @@
+If the sqeuence comatins many same refs, it will increase Hit cases, so the ratio will increase. And if all refs are the same, the ratio will tend to maximum. 
+The worst ratio we will get when all refs are distinct.
+
+As a result, we should use as many same-page references as possible to increase the ratio.
