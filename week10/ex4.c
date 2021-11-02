@@ -6,6 +6,7 @@
 
 #define SIZE 100
 
+// from https://stackoverflow.com/a/779960/11662577
 char *str_replace(char *orig, char *rep, char *with) {
     char *result; // the return string
     char *ins;    // the next insert point
